@@ -1,5 +1,5 @@
 import { Inngest } from "inngest";
-import User from "../models/User";
+import User from "../models/User.js";
 
 export const inngest = new Inngest({ id: "movie-ticket-booking" });
 
@@ -46,4 +46,4 @@ const syncUserUpdation = inngest.createFunction(
     }
 )
 
-export const functions = [syncUserCreation, syncUserCreation, syncUserUpdation];
+export const functions = [syncUserCreation, syncUserDeletion, syncUserUpdation];
